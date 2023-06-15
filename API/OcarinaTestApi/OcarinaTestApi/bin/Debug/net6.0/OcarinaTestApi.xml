@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OcarinaTestApi</name>
+    </assembly>
+    <members>
+        <member name="F:OcarinaTestApi.Controllers.ExerciseController._exerciseRepository">
+            <summary>
+            Cria um objeto _usuarioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.ExerciseController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.ExerciseController.ListaExercise">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Uma lista de usuários e um status code 200 - Ok</returns>
+            <response code="200">Retorna uma lista de usuários</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Usuarios
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.ExerciseController.BuscaPorId(System.Int32)">
+            <summary>
+            Busca um usuário através do ID
+            </summary>
+            <param name="id">ID do usuário que será buscado</param>
+            <returns>Um usuário buscado e um status code 200 - Ok</returns>
+            <response code="200">Retorna o usuário buscado</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Usuarios/id
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.ExerciseController.CadastraExercise(OcarinaTestApi.Domains.Exercise)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="novoUsuario">Objeto com as informações</param>
+            <returns>Um status code 201 - Created</returns>
+            <response code="201">Retorna apenas o status code Created</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Usuarios
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.ExerciseController.AtualizaUsuario(System.Int32,OcarinaTestApi.Domains.Exercise)">
+            <summary>
+            Atualiza um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será atualizado</param>
+            <param name="usuarioAtualizado">Objeto com as novas informações</param>
+            <returns>Um status code 204 - No Content</returns>
+            <response code="204">Retorna apenas o status code No Content</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Usuarios/id
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.ExerciseController.DeletaExercise(System.Int32)">
+            <summary>
+            Deleta um usuário
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+            <returns>Um status code 202 - Accepted</returns>
+            <response code="202">Retorna apenas o status code Accepted</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Usuarios/id
+        </member>
+        <member name="T:OcarinaTestApi.Controllers.TypeUserController">
+            <summary>
+            Controller responsável pelos endpoints referentes aos tipos de usuário
+            </summary>
+        </member>
+        <member name="F:OcarinaTestApi.Controllers.TypeUserController._typeUserRepository">
+            <summary>
+            Cria um objeto _tipoUsuarioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.TypeUserController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.TypeUserController.BuscaTipoUsuario">
+            <summary>
+            Lista todos os tipos de usuário
+            </summary>
+            <returns>Uma lista de tipos de usuário e um status code 200 - Ok</returns>
+            <response code="200">Retorna uma lista de tipos de usuário</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/TiposUsuario
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.TypeUserController.BuscaPorIdTipoUsuario(System.Int32)">
+            <summary>
+            Busca um tipo de usuário através do ID
+            </summary>
+            <param name="id">ID do tipo de usuário que será buscado</param>
+            <returns>Um tipo de usuário buscado e um status code 200 - Ok</returns>
+            <response code="200">Retorna o tipo de usuário buscado</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/TiposUsuario/id
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.TypeUserController.CadastraUsuario(OcarinaTestApi.Domains.TypeUser)">
+            <summary>
+            Cadastra um novo tipo de usuário
+            </summary>
+            <param name="novoTipoUsuario">Objeto com as informações</param>
+            <returns>Um status code 201 - Created</returns>
+            <response code="201">Retorna apenas o status code Created</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/TiposUsuario
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.TypeUserController.AtualizaTipoUsuario(System.Int32,OcarinaTestApi.Domains.TypeUser)">
+            <summary>
+            Atualiza um tipo de usuário existente
+            </summary>
+            <param name="id">ID do tipo de usuário que será atualizado</param>
+            <param name="tipoUsuarioAtualizado">Objeto com as novas informações</param>
+            <returns>Um status code 204 - No Content</returns>
+            <response code="204">Retorna apenas o status code No Content</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/TiposUsuario/id
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.TypeUserController.DeletaTipoUsuario(System.Int32)">
+            <summary>
+            Deleta um tipo de usuário
+            </summary>
+            <param name="id">ID do tipo de usuário que será deletado</param>
+            <returns>Um status code 202 - Accepted</returns>
+            <response code="202">Retorna apenas o status code Accepted</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/TiposUsuario/id
+        </member>
+        <member name="F:OcarinaTestApi.Controllers.UsersController._usuarioRepository">
+            <summary>
+            Cria um objeto _usuarioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.UsersController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.UsersController.BuscaPorId(System.Int32)">
+            <summary>
+            Busca um usuário através do ID
+            </summary>
+            <param name="id">ID do usuário que será buscado</param>
+            <returns>Um usuário buscado e um status code 200 - Ok</returns>
+            <response code="200">Retorna o usuário buscado</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Usuarios/id
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.UsersController.CadastraUsuario(OcarinaTestApi.Domains.User)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="novoUsuario">Objeto com as informações</param>
+            <returns>Um status code 201 - Created</returns>
+            <response code="201">Retorna apenas o status code Created</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Usuarios
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.UsersController.AtualizaUsuario(System.Int32,OcarinaTestApi.Domains.User)">
+            <summary>
+            Atualiza um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será atualizado</param>
+            <param name="usuarioAtualizado">Objeto com as novas informações</param>
+            <returns>Um status code 204 - No Content</returns>
+            <response code="204">Retorna apenas o status code No Content</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Usuarios/id
+        </member>
+        <member name="M:OcarinaTestApi.Controllers.UsersController.DeletaUsuario(System.Int32)">
+            <summary>
+            Deleta um usuário
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+            <returns>Um status code 202 - Accepted</returns>
+            <response code="202">Retorna apenas o status code Accepted</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+            dominio/api/Usuarios/id
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IExerciseRepository.Listar">
+            <summary>
+            Lista todos os tipos de exercicios 
+            </summary>
+            <returns>Uma lista de tipos de usuário</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IExerciseRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um tipo de exercicios por ID
+            </summary>
+            <param name="id">ID do tipo de exercicios que será buscado</param>
+            <returns>Um tipo de exercicios buscado</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IExerciseRepository.Cadastrar(OcarinaTestApi.Domains.Exercise)">
+            <summary>
+            Cadastra um novo tipo de exercicios
+            </summary>
+            <param name="novoExercicio">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IExerciseRepository.Atualizar(System.Int32,OcarinaTestApi.Domains.Exercise)">
+            <summary>
+            Atualiza um tipo de exercicios existente
+            </summary>
+            <param name="id">ID do tipo de exercicios que será atualizado</param>
+            <param name="exercicioAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IExerciseRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de exercicios
+            </summary>
+            <param name="id">ID do tipo de exercicios que será deletado</param>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.ITypeUserRepository.Listar">
+            <summary>
+            Lista todos os tipos de usuário
+            </summary>
+            <returns>Uma lista de tipos de usuário</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.ITypeUserRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um tipo de usuário por ID
+            </summary>
+            <param name="id">ID do tipo de usuário que será buscado</param>
+            <returns>Um tipo de usuário buscado</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.ITypeUserRepository.Cadastrar(OcarinaTestApi.Domains.TypeUser)">
+            <summary>
+            Cadastra um novo tipo de usuário
+            </summary>
+            <param name="novoTipoUsuario">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.ITypeUserRepository.Atualizar(System.Int32,OcarinaTestApi.Domains.TypeUser)">
+            <summary>
+            Atualiza um tipo de usuário existente
+            </summary>
+            <param name="id">ID do tipo de usuário que será atualizado</param>
+            <param name="tipoUsuarioAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.ITypeUserRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de usuário
+            </summary>
+            <param name="id">ID do tipo de usuário que será deletado</param>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IUserRepository.Listar">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Uma lista de usuários</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IUserRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuário por ID
+            </summary>
+            <param name="id">ID do usuário que será buscado</param>
+            <returns>Um usuário buscado</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IUserRepository.Login(System.String,System.String)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="email">E-mail do usuário</param>
+            <param name="senha">Senha do usuário</param>
+            <returns>Um usuário autenticado</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IUserRepository.Cadastrar(OcarinaTestApi.Domains.User)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="novoUsuario">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IUserRepository.Atualizar(System.Int32,OcarinaTestApi.Domains.User)">
+            <summary>
+            Atualiza um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será atualizado</param>
+            <param name="usuarioAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:OcarinaTestApi.Inteface.IUserRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuário
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+        </member>
+        <member name="F:OcarinaTestApi.Repositories.ExerciseRepository.ctx">
+            <summary>
+            Objeto contexto por onde serão chamados os métodos do EF Core
+            </summary>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.ExerciseRepository.Atualizar(System.Int32,OcarinaTestApi.Domains.Exercise)">
+            <summary>
+            Atualiza um tipo de exercicio existente
+            </summary>
+            <param name="id">ID do tipo de exercicio que será atualizado</param>
+            <param name="exercicioAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.ExerciseRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um tipo de usuário por ID
+            </summary>
+            <param name="id">ID do tipo de usuário que será buscado</param>
+            <returns>Um tipo de usuário buscado</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.ExerciseRepository.Cadastrar(OcarinaTestApi.Domains.Exercise)">
+            <summary>
+            Cadastra um novo tipo de usuário
+            </summary>
+            <param name="novoExercise">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.ExerciseRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de usuário
+            </summary>
+            <param name="id">ID do tipo de usuário que será deletado</param>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.ExerciseRepository.Listar">
+            <summary>
+            Lista todos os tipos de usuário
+            </summary>
+            <returns>Uma lista de tipos de usuário</returns>
+        </member>
+        <member name="F:OcarinaTestApi.Repositories.TypeUserRepository.ctx">
+            <summary>
+            Objeto contexto por onde serão chamados os métodos do EF Core
+            </summary>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.TypeUserRepository.Atualizar(System.Int32,OcarinaTestApi.Domains.TypeUser)">
+            <summary>
+            Atualiza um tipo de usuário existente
+            </summary>
+            <param name="id">ID do tipo de usuário que será atualizado</param>
+            <param name="tipoUsuarioAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.TypeUserRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um tipo de usuário por ID
+            </summary>
+            <param name="id">ID do tipo de usuário que será buscado</param>
+            <returns>Um tipo de usuário buscado</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.TypeUserRepository.Cadastrar(OcarinaTestApi.Domains.TypeUser)">
+            <summary>
+            Cadastra um novo tipo de usuário
+            </summary>
+            <param name="novoTipoUsuario">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.TypeUserRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de usuário
+            </summary>
+            <param name="id">ID do tipo de usuário que será deletado</param>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.TypeUserRepository.Listar">
+            <summary>
+            Lista todos os tipos de usuário
+            </summary>
+            <returns>Uma lista de tipos de usuário</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.UserRepository.Atualizar(System.Int32,OcarinaTestApi.Domains.User)">
+            <summary>
+            Atualiza um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será atualizado</param>
+            <param name="usuarioAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.UserRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuário por ID
+            </summary>
+            <param name="id">ID do usuário que será buscado</param>
+            <returns>Um usuário buscado</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.UserRepository.Cadastrar(OcarinaTestApi.Domains.User)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="novoUsuario">Objeto com as informações de cadastro</param>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.UserRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuário
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.UserRepository.Listar">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Uma lista de usuários</returns>
+        </member>
+        <member name="M:OcarinaTestApi.Repositories.UserRepository.Login(System.String,System.String)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="email">E-mail do usuário</param>
+            <param name="senha">Senha do usuário</param>
+            <returns>Um usuário autenticado</returns>
+        </member>
+    </members>
+</doc>
