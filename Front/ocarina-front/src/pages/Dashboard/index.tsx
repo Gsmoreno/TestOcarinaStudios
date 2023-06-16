@@ -1,50 +1,134 @@
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-
-import $ from 'jquery';
 import './style.css';
+import Fogo from '../../assets/fogo.png'
+import FogoApagado from '../../assets/fogo-apagado.png'
+import Star from '../../assets/star.png'
+import Calendario from '../../assets/calendario.png'
+import Haltere from '../../assets/haltere.png'
+import Plus from '../../assets/PLUS.png'
 
 function Dashboard() {
-    const navigate = useNavigate();
-    const HandleClick = async () => {
-        var Email = $("#email").val();
-        var Senha = $("#senha").val();
-
-        await axios({
-            method: 'post',
-            url: 'https://localhost:44367/api/Auth/Login',
-            data: {
-                email: Email,
-                senha: Senha
-            }
-        }).then(function (response) {
-            const token = response.data;
-            if (Object.keys(token).length !== 0) {
-                localStorage.setItem('fastFlex-token', token);
-                navigate("/dashboard");
-
-            } else {
-                localStorage.clear();
-                alert("Senha ou email incorretos!")
-            }
-        });
-    }
     return (
         <>
             <div className="page">
-                <form method="POST" className="formLogin">
-                    <h1>Login</h1>
-                    <p>Digite os seus dados de acesso no campo abaixo.</p>
-                    <label >E-mail</label>
-                    <input type="email" placeholder="Digite seu e-mail"  />
-                    <label >Senha</label>
-                    <input type="password" placeholder="Digite seu e-mail" />
-                    <a href="/">Esqueci minha senha</a>
-                    <input type="submit" value="Acessar" className="btn" />
-                </form>
+
+                <div className="left">
+                    <div className="containter-meta">
+                        <img className="star" src={Star} />
+                        <p className='goals-kcal'>Meta de calorias do dia:</p>
+                        <p className='goals-kcal'>300 <span>kcal</span></p>
+                    </div>
+
+                    <div className="container-exercicios">
+                        <h1 className='title-exercise'>Exercícios</h1>
+
+                        <div className='container-tasks'>
+                            <div className='tasks'>
+                                <img className="icon-task" src={Haltere} />
+                                <p className='text-task'>Correr</p>
+                            </div>
+
+                            <div className='tasks'>
+                                <img className="icon-task" src={Calendario} />
+                                <p className='text-task'>Finalizado</p>
+                            </div>
+
+                            <div className='tasks'>
+                                <img className="icon-task" src={Fogo} />
+                                <p className='text-task'>3050 <span className='span-task'>kcal</span></p>
+                            </div>
+
+                        </div>
+                        <div className='container-tasks'>
+                            <div className='tasks'>
+                                <img className="icon-task" src={Haltere} />
+                                <p className='text-task'>Correr</p>
+                            </div>
+
+                            <div className='tasks'>
+                                <img className="icon-task" src={Calendario} />
+                                <p className='text-task'>Finalizado</p>
+                            </div>
+
+                            <div className='tasks'>
+                                <img className="icon-task" src={Fogo} />
+                                <p className='text-task'>3050 <span className='span-task'>kcal</span></p>
+                            </div>
+
+                        </div>
+                        <div className='container-tasks'>
+                            <div className='tasks'>
+                                <img className="icon-task" src={Haltere} />
+                                <p className='text-task'>Correr</p>
+                            </div>
+
+                            <div className='tasks'>
+                                <img className="icon-task" src={Calendario} />
+                                <p className='text-task'>Finalizado</p>
+                            </div>
+
+                            <div className='tasks'>
+                                <img className="icon-task" src={Fogo} />
+                                <p className='text-task'>3050 <span className='span-task'>kcal</span></p>
+                            </div>
+
+                        </div>
+                        <div className='container-plus'>
+
+                            <img className="icon-task" src={Plus} />
+                            <p className='text-task'>ADICIONAR EXERCÍCIO</p>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div className="right">
+                    <div className="container-top">
+                        <h1 className='title-calories'>Top calorias no mês</h1>
+                        <p className='p-kcal'>32.050 <span className='span-kcal'>/cal</span></p>
+                        <h1 className='title-calories'>Dias consecutivos</h1>
+                        <div className="grid-days">
+                            <div className='day'>
+                                <p className='text-day'>SEG</p>
+                                <img className="fogo" src={Fogo} />
+                            </div>
+                            <div className='day'>
+                                <p className='text-day'>TER</p>
+                                <img className="fogo" src={Fogo} />
+                            </div>
+                            <div className='day'>
+                                <p className='text-day'>QUA</p>
+                                <img className="fogo" src={Fogo} />
+                            </div>
+                            <div className='day'>
+                                <p className='text-day'>QUI</p>
+                                <img className="fogo" src={Fogo} />
+                            </div>
+                            <div className='day'>
+                                <p className='text-day'>SEX</p>
+                                <img className="fogo-apagado" src={FogoApagado} />
+                            </div>
+                            <div className='day'>
+                                <p className='text-day'>SAB</p>
+                                <img className="fogo-apagado" src={FogoApagado} />
+                            </div>
+                            <div className='day'>
+                                <p className='text-day'>DOM</p>
+                                <img className="fogo-apagado" src={FogoApagado} />
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </>
-    );
+    )
+
+
+
 }
 
 export default Dashboard;

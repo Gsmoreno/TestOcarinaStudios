@@ -5,7 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.page {
+.pageL {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,7 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: #480ca8;
+    background-color: #262626;
     font-family: 'Inter', sans-serif;
 }
 
@@ -58,7 +58,7 @@
 
 
 .formLogin input:focus {
-    border: 1px solid #f72585;
+    border: 1px solid #F5A900;
 }
 
 .formLogin label {
@@ -75,11 +75,11 @@
 }
 
 .formLogin a:hover {
-    color: #f72585;
+    color: #F5A900;
 }
 
 .btn {
-    background-color: #f72585;
+    background-color: #F5A900;
     color: #fff;
     font-size: 14px;
     font-weight: 600;
@@ -92,6 +92,6 @@
 
 .btn:hover {
     transform: scale(1.05);
-    background-color: #ff0676;
+    background-color: #F5A900;
 
 }
