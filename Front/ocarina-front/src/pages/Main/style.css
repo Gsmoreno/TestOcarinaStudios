@@ -1,0 +1,142 @@
+.page {
+  background-color: #232323;
+  display: grid;
+  min-height: 100vh;
+  min-width: 100vw;
+  grid-template-columns: 2fr 3fr;
+
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+}
+
+.star {
+  width: 30px;
+}
+
+.containter-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center ;
+  gap: 8px;
+}
+
+.left > .container-exercicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: solid 1px #AAAAAA;
+  padding: 28px 64px 28px 64px;  
+  border-radius: 25px;
+  gap: 28px ;
+}
+
+.container-tasks {
+  background: #1E1E1E;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 16px 8px;
+  gap: 12px;  
+}
+
+.container-plus {
+  background: #1E1E1E;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  padding: 16px 8px;
+  gap: 12px; 
+}
+
+.goals-kcal {
+  color: #FA991E;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.text-task {
+font-size: 20px;
+color: #FA991E;
+}
+
+.text-task > .span-task {
+  font-size: 12px;
+}
+
+.title-exercise {
+  font-size: 64px;
+}
+
+.icon-task {
+  width: 30px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.right {
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+}
+
+.right > .container-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border:  solid 1px #AAAAAA;
+  padding: 28px 120px 28px 120px;  
+  border-radius: 25px;
+  gap: 28px ;
+}
+
+.p-kcal { 
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+
+.p-kcal > .span-kcal {
+  color: #F5A900;
+  font-size: 25px;
+  
+}
+
+.title-calories {
+  font-size: 40px;  
+  color: #F5A900;
+}
+
+.grid-days {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.text-day {
+  color: white;
+}
+
+.fogo {
+  width: 40px;
+}
+.fogo-apagado {
+  width: 40px;
+}
+
