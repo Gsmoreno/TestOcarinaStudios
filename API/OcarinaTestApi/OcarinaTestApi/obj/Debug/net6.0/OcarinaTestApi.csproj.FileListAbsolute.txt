@@ -87,3 +87,6 @@ C:\Users\gugus\OneDrive\Área de Trabalho\TestOcarinaStudios\API\OcarinaTestApi\
 C:\Users\gugus\OneDrive\Área de Trabalho\TestOcarinaStudios\API\OcarinaTestApi\OcarinaTestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\gugus\OneDrive\Área de Trabalho\TestOcarinaStudios\API\OcarinaTestApi\OcarinaTestApi\bin\Debug\net6.0\OcarinaTestApi.xml
 C:\Users\gugus\OneDrive\Área de Trabalho\TestOcarinaStudios\API\OcarinaTestApi\OcarinaTestApi\obj\Debug\net6.0\OcarinaTestApi.xml
+C:\Users\gugus\OneDrive\Área de Trabalho\TestOcarinaStudios\API\OcarinaTestApi\OcarinaTestApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\gugus\OneDrive\Área de Trabalho\TestOcarinaStudios\API\OcarinaTestApi\OcarinaTestApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\gugus\OneDrive\Área de Trabalho\TestOcarinaStudios\API\OcarinaTestApi\OcarinaTestApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.VedaX.dll
