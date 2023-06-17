@@ -7,12 +7,18 @@ import jwt from 'jwt-decode'
 const LOGIN_URL = "Auth/Login";
 function Login() {
     const navigate = useNavigate();
-    const HandleClick = async () => {
+    async function handleClick(){
         var email = $("#email").val();
         var password = $("#senha").val();
         var name = "gustavo";
         var caloriesDay = "300";
         debugger;
+
+        let axiosConfig = {
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+            }
+        };
 
         var data =
         {
@@ -21,22 +27,34 @@ function Login() {
             password,
             caloriesDay
         }
-        api.post(LOGIN_URL,
-            data
-        ).then(res => {
-            if (res.status == 200) {
-                var token = res.data.token;
-                // var decoded = jwtDecode(token);
-                var role = res.data.role;
 
-                // localStorage.setItem('fastFlex-token', res.data.token);
-                navigate("/dashboard");
+        axios.post('https://localhost:5000/api/Auth/Login', data, axiosConfig)
+            .then((response) => {
+                console.log("sera?");
+                const token = response.data;
+                if (Object.keys(token).length !== 0) {
+                    debugger;
+                    localStorage.setItem('fastFlex-token', token);
+                    navigate("/dashboard");
+                } else {
+                    localStorage.clear();
+                    alert("Senha ou email incorretos!");
+                }
+            })
+            .catch((error) => {
+                // Captura do erro
+                console.log(error.response.data);
+            
+                // Lógica de tratamento do erro
+                // ...
+            
+                // Opcional: Manter na tela do Dashboard
+                // ...
+            
+                // Exemplo de redirecionamento alternativo
+                // window.location.href = '/dashboard';
+              });
 
-            } else {
-                localStorage.clear();
-                alert("Senha ou email incorretos!")
-            }
-        });
     }
 
     return (
@@ -50,7 +68,7 @@ function Login() {
                     <label >Senha</label>
                     <input id='senha' type="password" placeholder="Digite seu e-mail" />
                     <a href="/">Esqueci minha senha</a>
-                    <button onClick={HandleClick}>Entrar</button>
+                    <button onClick={handleClick}>Entrar</button>
                 </form>
             </div>
         </>

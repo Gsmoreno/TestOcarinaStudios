@@ -1,10 +1,14 @@
-.page {
+.pageC {
   background-color: #1E1E1E;
   display: flex;
   align-items: center;
-  gap: 40px;  
+  gap: 40px;
   overflow: hidden;
   position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .form {
@@ -23,7 +27,7 @@
 .medium {
   display: flex;
   flex-direction: row;
-  gap: 16px;  
+  gap: 16px;
 }
 
 .end-form {
@@ -31,7 +35,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   gap: 12px;
 }
 
@@ -42,6 +46,7 @@
   border: none;
   height: 40px;
 }
+
 .lose-calories-input {
   border-radius: 20px;
   background: #232323;
@@ -49,6 +54,7 @@
   border: none;
   height: 40px;
 }
+
 .end-data-input {
   border-radius: 20px;
   background: #232323;
@@ -62,10 +68,11 @@
   flex-direction: column;
   width: 50%;
 }
+
 .end-date {
   display: flex;
   flex-direction: column;
-  width: 50%; 
+  width: 50%;
 }
 
 .white-ball {
@@ -91,21 +98,28 @@
 .title-label {
   color: #FA991E;
   font-weight: 600;
+  font-family: 'Koulen', cursive;
 }
 
 h1 {
   color: #FA991E;
+  font-family: 'Koulen', cursive;
 }
 
-.end-form > input[type=checkbox] {
-  
+h2 {
+  color: #FA991E;
+  font-family: 'Koulen', cursive;
+}
+
+.end-form>input[type=checkbox] {
+
   border-radius: 4px;
 }
 
 .button-submit {
   width: 50%;
   padding: 12px 24px 12px 24px;
-  border-radius: 12px;  
+  border-radius: 12px;
   border: none;
   background-color: #FA991E;
   cursor: pointer;
@@ -121,4 +135,3 @@ h1 {
 .button-submit:hover {
   background-color: #ffad41;
 }
-
